@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/App.css";
+import { useNavigate } from "react-router-dom";
 
 export default function SearchBus({
   from,
@@ -13,11 +14,12 @@ export default function SearchBus({
   setFilter,
 }) {
   // const [value, setValue] = useState("");
-
+  const navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
     fetchDate(from, to);
     console.log(from, to, date, setData, setData2);
+    navigate("BusDetails");
     // let newData = [...data2]
   };
   const fetchDate = async (from, to) => {

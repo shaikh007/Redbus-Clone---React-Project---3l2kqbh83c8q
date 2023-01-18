@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const BusDetails = ({ filter, data, data2, setShow }) => {
+  const navigate = useNavigate();
   return (
     <div id="bus-details">
       <div id="sortby">
@@ -30,6 +32,7 @@ export const BusDetails = ({ filter, data, data2, setShow }) => {
               id="bus-list"
               onClick={() => {
                 setShow(user);
+                navigate("BusCard");
               }}
               key={index}
             >

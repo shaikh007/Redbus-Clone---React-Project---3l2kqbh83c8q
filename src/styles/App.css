@@ -332,6 +332,11 @@
     background-color: palegoldenrod;
 }
 
+
+/* #top1:active {
+    background-color: yellow;
+} */
+
 #top2 {
     background-color: rgb(219, 219, 219);
     border: 2px solid black;

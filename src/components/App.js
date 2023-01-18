@@ -10,7 +10,7 @@ import { Image } from "./Image";
 import Details from "./Details";
 import { BusDetails } from "./BusDetails";
 import { BusCard } from "./BusCard";
-import { handHeart, user } from "fontawesome";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [message, setMessage] = useState("");
@@ -52,10 +52,21 @@ const App = () => {
           setFilter={setFilter}
         />
       </div>
-      <Image />
-      <Details />
-      <BusDetails filter={filter} setShow={setShow} data={data} data2={data2} />
-      <BusCard show={show} />
+      <Routes>
+        <Route path="/" element={<Image />} />
+        <Route
+          path="BusDetails"
+          element={
+            <BusDetails
+              filter={filter}
+              setShow={setShow}
+              data={data}
+              data2={data2}
+            />
+          }
+        />
+        <Route path="BusDetails/BusCard" element={<BusCard show={show} />} />
+      </Routes>
     </div>
   );
 };
