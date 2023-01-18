@@ -12,7 +12,7 @@ export default function SearchBus({
   setData2,
   setFilter,
 }) {
-  const [value, setValue] = useState("");
+  // const [value, setValue] = useState("");
 
   const handleClick = (e) => {
     e.preventDefault();

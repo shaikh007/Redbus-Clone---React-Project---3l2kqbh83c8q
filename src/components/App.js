@@ -6,6 +6,10 @@ import Destination from "./Destination";
 import { Date } from "./Date";
 import SearchBus from "./SearchBus";
 import Nav from "./Nav";
+import { Image } from "./Image";
+import Details from "./Details";
+import { BusDetails } from "./BusDetails";
+import { BusCard } from "./BusCard";
 import { handHeart, user } from "fontawesome";
 
 const App = () => {
@@ -15,15 +19,8 @@ const App = () => {
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
   const [filter, setFilter] = useState([]);
-  const [show, setShow] = useState(data);
+  const [show, setShow] = useState({});
   // const [filter, setFilter] = useState(setData2);
-  useEffect(() => {
-    console.log(filter);
-  }, [filter]);
-  const handleShow = () => {
-    console.log(data, data2);
-    setShow(data);
-  };
 
   return (
     <div id="main">
@@ -55,162 +52,10 @@ const App = () => {
           setFilter={setFilter}
         />
       </div>
-      <div id="image">
-        <img src="redbus-logo.png" alt="" />
-      </div>
-      <div id="details">
-        <div id="heading">
-          <h1>Book Your Buses With RedBus</h1>
-        </div>
-        <div id="png">
-          <img src="symbole-de-bus-rouge.png" alt="" />
-        </div>
-      </div>
-      <div id="bus-details">
-        <div id="sortby">
-          <div id="sort-text">
-            <h1>SORT BY: </h1>
-          </div>
-          <div id="details-of-sorting">
-            <div id="schedule">
-              <h3>Name</h3>
-            </div>
-            <div id="schedule">
-              <h3>Departure</h3>
-            </div>
-            <div id="schedule">
-              <h3>Arrival</h3>
-            </div>
-            <div id="schedule">
-              <h3>Price</h3>
-            </div>
-          </div>
-        </div>
-
-        <div id="bus-layer">
-          {filter &&
-            filter.map((user, index) => (
-              <div id="bus-list" onClick={handleShow} key={index}>
-                <div id="bus-list-schedule">
-                  <h3>{user.busName}</h3>
-                </div>
-                <div id="bus-list-schedule">
-                  <h3>
-                    Departure Time <br /> {user.departureTime}
-                  </h3>
-                </div>
-                <div id="bus-list-schedule">
-                  <h3>
-                    Arrival Time <br /> {user.arrivalTime}
-                  </h3>
-                </div>
-                <div id="bus-list-schedule">
-                  <h3>Bus rating 9/10</h3>
-                </div>
-                <div id="bus-list-schedule">
-                  <h3>Price {user.ticketPrice}</h3>
-                </div>
-              </div>
-            ))}
-        </div>
-      </div>
-      <div id="bus-cards">
-        {show.map((user2) => (
-          <div id="bus-card-list">
-            <div id="bus-card-layer">
-              <div id="bus-list-schedule">
-                <h3>{user2.busName}</h3>
-              </div>
-              <div id="bus-list-schedule">
-                <h3>
-                  Departure Time <br /> {user2.departureTime}
-                </h3>
-              </div>
-              <div id="bus-list-schedule">
-                <h3>
-                  Arrival Time <br /> {user2.arrivalTime}
-                </h3>
-              </div>
-              <div id="bus-list-schedule">
-                <h3>Bus rating 9/10</h3>
-              </div>
-              <div id="bus-list-schedule">
-                <h3>
-                  Price <br /> {user2.ticketPrice}
-                </h3>
-              </div>
-            </div>
-            <div id="image">
-              <img src="redbus_logo.png" alt="" />
-            </div>
-            <div id="bus-seat-select">
-              <div id="top">
-                <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
-                </div>
-                <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
-                </div>
-                <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
-                </div>
-                <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
-                </div>
-                <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
-                </div>
-                <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
-                </div>
-                <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
-                </div>
-                <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
-                </div>
-              </div>
-              <div id="bottom">
-                <div id="mainBottom">
-                  <div id="bottom1"></div>
-                </div>
-                <div id="mainBottom">
-                  <div id="bottom1"></div>
-                </div>
-                <div id="mainBottom">
-                  <div id="bottom1"></div>
-                </div>
-                <div id="mainBottom">
-                  <div id="bottom1"></div>
-                </div>
-                <div id="mainBottom">
-                  <div id="bottom1"></div>
-                </div>
-                <div id="mainBottom">
-                  <div id="bottom1"></div>
-                </div>
-                <div id="mainBottom">
-                  <div id="bottom1"></div>
-                </div>
-                <div id="mainBottom">
-                  <div id="bottom1"></div>
-                </div>
-              </div>
-            </div>
-            <div id="book-ticket">
-              <button type="submit">BOOK TICKET</button>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Image />
+      <Details />
+      <BusDetails filter={filter} setShow={setShow} data={data} data2={data2} />
+      <BusCard show={show} />
     </div>
   );
 };
