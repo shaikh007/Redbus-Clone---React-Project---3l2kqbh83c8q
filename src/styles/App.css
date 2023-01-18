@@ -228,6 +228,12 @@
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#bus-list:hover {
+    background-color: aqua;
 }
 
 #bus-list-schedule {
@@ -319,6 +325,11 @@
     margin: 4px;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+}
+
+#top1:hover {
+    background-color: palegoldenrod;
 }
 
 #top2 {
@@ -328,6 +339,11 @@
     margin: 4px;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+}
+
+#top2:hover {
+    background-color: palegoldenrod;
 }
 
 #bottom {
@@ -357,20 +373,34 @@
     margin: 4px;
     width: 100%;
     height: 35px;
+    cursor: pointer;
+}
+
+#bottom1:hover {
+    background-color: palegoldenrod;
 }
 
 #book-ticket {
     background-color: rgb(76, 255, 76);
     margin-left: auto;
     margin-top: 50px;
-    padding: 20px 60px;
+    cursor: pointer;
+}
+
+#book-ticket:hover {
+    background-color: bisque;
 }
 
 #book-ticket button {
     background-color: rgb(76, 255, 76);
     width: 100%;
     border: none;
+    padding: 20px 60px;
     font-size: 20px;
     font-weight: 700;
     /* padding: 20px; */
+}
+
+#book-ticket button:hover {
+    background-color: bisque;
 }
