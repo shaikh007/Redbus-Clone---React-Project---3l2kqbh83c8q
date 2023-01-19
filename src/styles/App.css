@@ -6,8 +6,9 @@
 
 #main-duplicate {
     background-color: rgb(217, 217, 217);
-    margin: 350px;
-    margin-top: 100px;
+    width: 80%;
+    margin: 100px auto;
+    /* margin-top: 100px; */
     margin-bottom: 0;
     padding: 20px;
     display: flex;
