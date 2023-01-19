@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+// import {image} from "../"
 
 export const BusCard = ({ show }) => {
   //   useEffect(() => {}, [show]);
@@ -31,7 +32,7 @@ export const BusCard = ({ show }) => {
               </div>
             </div>
             <div id="image">
-              <img src="redbus_logo.png" alt="" />
+              <img src="redbus-logo.png" alt="" />
             </div>
             <div id="bus-seat-select">
               <div id="top">
