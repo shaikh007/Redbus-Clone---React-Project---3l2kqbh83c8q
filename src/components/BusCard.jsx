@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import image from "";
-
 export const BusCard = ({ show }) => {
-  //   useEffect(() => {}, [show]);
-
   // const [ticketPrice, setTicketPrice] = useState(
   //   localStorage.getItem("ticketPrice")
   // );

@@ -1,14 +1,6 @@
 import React from "react";
 import "../styles/App.css";
-{
-  /* <input
-  type="text"
-  id="message"
-  name="message"
-  onChange={handleChange}
-  value={message}
-/>; */
-}
+
 export default function Destination(props) {
   const handleChange = (e) => {
     props.setToMessage(e.target.value);
