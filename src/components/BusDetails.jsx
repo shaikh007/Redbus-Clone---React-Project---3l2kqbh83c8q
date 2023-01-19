@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const BusDetails = ({ filter, data, data2, setShow }) => {
+  // localStorage.setItem(
+  //   "ticketPrice",
+  //   filter.map((ticket) => ticket.ticketPrice)
+  // );
+  // console.log(filter.map((ticket) => ticket.ticketPrice));
   const navigate = useNavigate();
   return (
     <div id="bus-details">

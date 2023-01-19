@@ -1,8 +1,26 @@
-import React, { useEffect } from "react";
-// import {image} from "../"
+import React, { useEffect, useState } from "react";
+// import image from "";
 
 export const BusCard = ({ show }) => {
   //   useEffect(() => {}, [show]);
+
+  // const [ticketPrice, setTicketPrice] = useState(
+  //   localStorage.getItem("ticketPrice")
+  // );
+  let seatArr = [];
+  const handleClick = (e) => {
+    if (!seatArr.includes(e.target.id)) {
+      seatArr.push(e.target.id);
+      document.getElementById(e.target.id).style.backgroundColor = "red";
+      console.log(e.target.id);
+    } else {
+      seatArr.pop(e.target.id);
+      document.getElementById(e.target.id).style.backgroundColor =
+        "rgb(219, 219, 219)";
+      console.log(e.target.id);
+    }
+    console.log(seatArr);
+  };
   return (
     <>
       {show && show.busName ? (
@@ -32,67 +50,102 @@ export const BusCard = ({ show }) => {
               </div>
             </div>
             <div id="image">
-              <img src="redbus-logo.png" alt="" />
+              <img
+                src="https://cdn.dribbble.com/users/2272786/screenshots/10965290/stay_home_splash_screen.gif"
+                alt=""
+              />
             </div>
             <div id="bus-seat-select">
               <div id="top">
                 <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
+                  <div id="top1" onClick={handleClick} className="top1"></div>
+                  <div id="top2" onClick={handleClick} className="top2"></div>
                 </div>
                 <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
+                  <div id="top3" onClick={handleClick} className="top1"></div>
+                  <div id="top4" onClick={handleClick} className="top2"></div>
                 </div>
                 <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
+                  <div id="top5" onClick={handleClick} className="top1"></div>
+                  <div id="top6" onClick={handleClick} className="top2"></div>
                 </div>
                 <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
+                  <div id="top7" onClick={handleClick} className="top1"></div>
+                  <div id="top8" onClick={handleClick} className="top2"></div>
                 </div>
                 <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
+                  <div id="top9" onClick={handleClick} className="top1"></div>
+                  <div id="top10" onClick={handleClick} className="top2"></div>
                 </div>
                 <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
+                  <div id="top11" onClick={handleClick} className="top1"></div>
+                  <div id="top12" onClick={handleClick} className="top2"></div>
                 </div>
                 <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
+                  <div id="top13" onClick={handleClick} className="top1"></div>
+                  <div id="top14" onClick={handleClick} className="top2"></div>
                 </div>
                 <div id="mainTop">
-                  <div id="top1"></div>
-                  <div id="top2"></div>
+                  <div id="top15" onClick={handleClick} className="top1"></div>
+                  <div id="top16" onClick={handleClick} className="top2"></div>
                 </div>
               </div>
               <div id="bottom">
                 <div id="mainBottom">
-                  <div id="bottom1"></div>
+                  <div
+                    id="bottom1"
+                    onClick={handleClick}
+                    className="bottom1"
+                  ></div>
                 </div>
                 <div id="mainBottom">
-                  <div id="bottom1"></div>
+                  <div
+                    id="bottom2"
+                    onClick={handleClick}
+                    className="bottom1"
+                  ></div>
                 </div>
                 <div id="mainBottom">
-                  <div id="bottom1"></div>
+                  <div
+                    id="bottom3"
+                    onClick={handleClick}
+                    className="bottom1"
+                  ></div>
                 </div>
                 <div id="mainBottom">
-                  <div id="bottom1"></div>
+                  <div
+                    id="bottom4"
+                    onClick={handleClick}
+                    className="bottom1"
+                  ></div>
                 </div>
                 <div id="mainBottom">
-                  <div id="bottom1"></div>
+                  <div
+                    id="bottom5"
+                    onClick={handleClick}
+                    className="bottom1"
+                  ></div>
                 </div>
                 <div id="mainBottom">
-                  <div id="bottom1"></div>
+                  <div
+                    id="bottom6"
+                    onClick={handleClick}
+                    className="bottom1"
+                  ></div>
                 </div>
                 <div id="mainBottom">
-                  <div id="bottom1"></div>
+                  <div
+                    id="bottom7"
+                    onClick={handleClick}
+                    className="bottom1"
+                  ></div>
                 </div>
                 <div id="mainBottom">
-                  <div id="bottom1"></div>
+                  <div
+                    id="bottom8"
+                    onClick={handleClick}
+                    className="bottom1"
+                  ></div>
                 </div>
               </div>
             </div>
