@@ -8,14 +8,11 @@ module.exports = {
         filename: "index_bundle.js",
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.(png|jpe?g|gif|svg)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                    },
-                ],
+                use: [{
+                    loader: 'file-loader',
+                }, ],
             },
             {
                 test: /\.js$|\.jsx$/,
@@ -26,8 +23,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    {
+                use: [{
                         loader: 'style-loader',
                     },
                     {
