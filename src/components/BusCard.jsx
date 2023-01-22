@@ -1,21 +1,41 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 export const BusCard = ({ show }) => {
-  // const [ticketPrice, setTicketPrice] = useState(
-  //   localStorage.getItem("ticketPrice")
-  // );
+  const navigate = useNavigate();
+  const [ticketPrice, setTicketPrice] = useState(
+    localStorage.getItem("ticketPrice")
+  );
+  localStorage.setItem("ticketPrice", show.ticketPrice);
+  localStorage.setItem("From", show.source);
+  localStorage.setItem("To", show.destination);
+  localStorage.setItem("Arrival", show.arrivalTime);
+  localStorage.setItem("Departure", show.departureTime);
   let seatArr = [];
   const handleClick = (e) => {
     if (!seatArr.includes(e.target.id)) {
       seatArr.push(e.target.id);
       document.getElementById(e.target.id).style.backgroundColor = "red";
-      console.log(e.target.id);
     } else {
       seatArr.pop(e.target.id);
       document.getElementById(e.target.id).style.backgroundColor =
         "rgb(219, 219, 219)";
-      console.log(e.target.id);
     }
-    console.log(seatArr);
+    localStorage.setItem("SeatArr", JSON.stringify(seatArr));
+  };
+  const handleBook = (e) => {
+    if (seatArr.length !== 0) {
+      let cal = seatArr.length * localStorage.getItem("ticketPrice");
+      localStorage.setItem("TotalPrice", cal);
+      setTicketPrice(cal);
+      localStorage.setItem("seatNum", seatArr.length);
+      navigate("Booked");
+    } else {
+      document.querySelector(".msg").style.display = "Block";
+      setTimeout(() => {
+        document.querySelector(".msg").style.display = "none";
+      }, 2000);
+    }
   };
   return (
     <>
@@ -146,7 +166,9 @@ export const BusCard = ({ show }) => {
               </div>
             </div>
             <div id="book-ticket">
-              <button type="submit">BOOK TICKET</button>
+              <button type="submit" onClick={handleBook}>
+                BOOK TICKET
+              </button>
             </div>
           </div>
         </div>

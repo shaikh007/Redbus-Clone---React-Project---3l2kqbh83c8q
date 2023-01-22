@@ -10,7 +10,7 @@ export default function Swap({ source, destination, setSource, setToSource }) {
     // source = destination;
     setToSource(temp);
     // destination = temp;
-    console.log(source, destination);
+    // console.log(source, destination);
   };
 
   return (

@@ -404,9 +404,79 @@
     padding: 20px 60px;
     font-size: 20px;
     font-weight: 700;
+    cursor: pointer;
     /* padding: 20px; */
 }
 
 #book-ticket button:hover {
     background-color: bisque;
+}
+
+
+/* Booked.js */
+
+.booking {
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    height: auto;
+    background-color: #d54f5f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seatNo {
+    font-size: 30px;
+    color: antiquewhite;
+    padding-bottom: 20px;
+}
+
+.total {
+    font-size: 30px;
+    color: antiquewhite;
+    padding-bottom: 20px;
+}
+
+.fromto {
+    font-size: 30px;
+    color: antiquewhite;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.thanksgiving {
+    font-size: 30px;
+    color: antiquewhite;
+    padding-bottom: 20px;
+}
+
+.notification {
+    font-size: 30px;
+    color: antiquewhite;
+    padding-bottom: 20px;
+}
+
+.backbtn {
+    background-color: rgb(76, 255, 76);
+    margin-left: auto;
+    margin-right: 50px;
+    /* margin-top: 30px; */
+    cursor: pointer;
+}
+
+.backbtn button {
+    background-color: rgb(76, 255, 76);
+    width: 100%;
+    border: none;
+    padding: 20px 60px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
 }

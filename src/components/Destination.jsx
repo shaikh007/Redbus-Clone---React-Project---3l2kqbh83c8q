@@ -15,6 +15,7 @@ export default function Destination(props) {
         onChange={handleChange}
         value={props.toMessage}
         placeholder="Enter Destination"
+        // defaultValue={"bhubaneswar"}
       />
     </div>
   );

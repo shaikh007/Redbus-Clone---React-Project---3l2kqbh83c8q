@@ -13,19 +13,17 @@ export default function SearchBus({
   setData2,
   setFilter,
 }) {
-  // const [value, setValue] = useState("");
   const navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
     fetchDate(from, to);
-    console.log(from, to, date, setData, setData2);
     navigate("BusDetails");
-    // let newData = [...data2]
   };
   const fetchDate = async (from, to) => {
     const url1 = `https://content.newtonschool.co/v1/pr/63b70222af4f30335b4b3b9a/buses?source=${from}&destination=${to}`;
     const url2 =
       "https://content.newtonschool.co/v1/pr/63b70222af4f30335b4b3b9a/buses";
+
     await fetch(url1)
       .then((response) => response.json())
       .then((data) => setData(data));
