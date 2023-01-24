@@ -24,6 +24,7 @@ const App = () => {
   return (
     <div id="main">
       <Nav />
+
       <div id="main-duplicate">
         <Source message={message} setMessage={setMessage} />
         <Swap

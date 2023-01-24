@@ -1,8 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Loader } from "webpack";
-// import Loader from "../Loader/Loader";
-// import { Loader } from "webpack";
 export const Booked = () => {
   const nav = useNavigate();
   const from = localStorage.getItem("From");
